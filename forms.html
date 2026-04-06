@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Cadastro</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background-color: #eef2f7;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      form div {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input,
+      select,
+      textarea {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+      }
+
+      .inline {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .submit-btn {
+        background-color: #28a745;
+        color: white;
+      }
+
+      .submit-btn:hover {
+        background-color: #218838;
+      }
+
+      .reset-btn {
+        background-color: #dc3545;
+        color: white;
+      }
+
+      .reset-btn:hover {
+        background-color: #c82333;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Formulário de Cadastro</h1>
+      <p>Preencha os dados abaixo para realizar seu cadastro.</p>
+
+      <form>
+        <div>
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required />
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div>
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" name="senha" required />
+        </div>
+
+        <div>
+          <label for="data">Data de nascimento</label>
+          <input type="date" id="data" name="data" required />
+        </div>
+
+        <div>
+          <label for="produtos">Produtos</label>
+          <select id="produtos" name="produtos">
+            <option value="">Selecione</option>
+            <option value="iphone">Iphone 17 Pro Max</option>
+            <option value="galaxy">Galaxy S26 Ultra</option>
+            <option value="playstation">PlayStation 5 Pro</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Gênero</label>
+          <div class="inline">
+            <input
+              type="radio"
+              id="masculino"
+              name="genero"
+              value="masculino"
+            />
+            <label for="masculino">Masculino</label>
+
+            <input type="radio" id="feminino" name="genero" value="feminino" />
+            <label for="feminino">Feminino</label>
+          </div>
+        </div>
+
+        <div>
+          <label>Interesses</label>
+          <div class="inline">
+            <input type="checkbox" id="tech" name="interesses" value="tech" />
+            <label for="tech">Tecnologia</label>
+
+            <input
+              type="checkbox"
+              id="carros"
+              name="interesses"
+              value="carros"
+            />
+            <label for="carros">Carros</label>
+
+            <input
+              type="checkbox"
+              id="musica"
+              name="interesses"
+              value="musica"
+            />
+            <label for="musica">Música</label>
+          </div>
+        </div>
+
+        <div>
+          <label for="arquivo">Upload de arquivo</label>
+          <input type="file" id="arquivo" name="arquivo" />
+        </div>
+
+        <div>
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+        </div>
+
+        <div class="buttons">
+          <button type="submit" class="submit-btn">Enviar</button>
+          <button type="reset" class="reset-btn">Limpar</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
